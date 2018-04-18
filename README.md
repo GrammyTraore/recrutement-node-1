@@ -8,13 +8,13 @@ Ce test de recrutement est orienté `back-end` et teste les connaissances d'un d
 
 ### Besoin
 
-Nous devons déployer une flotte d'appareils connectés affichant en mode kiosque une interface web. Notre besoin - et votre mission - sera de développer un service back permettant de logguer des actions utilisateurs issus de ces interfaces. Nous devons également savoir si une interface est connectée ou non.
+Nous devons déployer une flotte d'appareils connectés affichant en mode kiosque une interface web. Notre besoin - et votre mission - sera de développer un service back permettant de logguer des actions utilisateurs issues de ces interfaces. Nous devons également savoir si une interface est connectée ou non.
 
 ### Contexte
 
 L'ancien développeur chargé d'effectuer cette tâche a amorcé la partie front et une partie du développement back, malheureusement, ce dernier est parti aux Bahamas sans prévenir personne.
 
-Vous devez reprendre son travail - sans réinventer la roue. Ce développeur n'a pas pour habitude de trop documenter son code... mais vous devriez quand même vous en sortir.
+Vous devez reprendre son travail - sans réinventer la roue. Ce développeur n'a pas pour habitude de documenter son code... mais vous devriez quand même vous en sortir.
 
 Vous trouverez dans le dossier `kickstart/` son initial commit.
 
