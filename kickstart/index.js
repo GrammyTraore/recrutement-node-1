@@ -29,13 +29,17 @@ const initializeWS = () => {
     const app = express()
     const server = http.Server(app)
     const io = socketio(server)
+    const socketHandler = require('./ws/handler.js')
 
-    app.get('/', (req, res) => res.res.sendFile(__dirname + '/public/index.html'))
-    app.get('/main.js', (req, res) => res.res.sendFile(__dirname + '/public/main.js'))
+    app.get('/', (req, res) => res.sendFile(__dirname + '/public/index.html'))
+    app.get('/main.js', (req, res) => res.sendFile(__dirname + '/public/main.js'))
 
     server.listen(PORT, (error) => {
       if (error) reject(error)
-      else resolve()
+      else {
+        io.on('connection', socketHandler)
+        resolve()
+      }
     })
   })
 }

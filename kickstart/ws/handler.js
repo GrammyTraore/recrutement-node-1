@@ -10,14 +10,14 @@ function handleSocket(socket) {
 	  socket.on('disconnect', () => {
       users.disconnect(user).then(() => {
         debug('User disconnected:', user.uid)
-      })
+      }).catch(console.error)
 	  })
 	  
 	  socket.on('track', event => {
 	  	debug('Event arrived:', event.channel, user.uid)
-	  	events.create(user, event.channel).then(() => debug('Event saved:', event.channel, user.uid))
+	  	events.create(user, event.channel).then(() => debug('Event saved:', event.channel, user.uid)).catch(console.error)
 	  })
-  })
+  }).catch(console.error)
   
 }
 
