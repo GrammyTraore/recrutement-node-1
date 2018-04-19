@@ -27,7 +27,7 @@ const initializeWS = () => {
 
   return new Promise((resolve, reject) => {
     const app = express()
-    const server = http.Server(app)
+    const server = Server(app)
     const io = socketio(server)
     const socketHandler = require('./ws/handler.js')
 
@@ -37,6 +37,7 @@ const initializeWS = () => {
     server.listen(PORT, (error) => {
       if (error) reject(error)
       else {
+        debug('Add ws handler')
         io.on('connection', socketHandler)
         resolve()
       }
@@ -51,4 +52,3 @@ initializeMongo()
     console.log(`Open your browser on http://localhost:${PORT} to launch the interface`)
   })
   .catch(console.error)
-
